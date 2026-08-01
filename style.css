@@ -373,3 +373,63 @@ font-size:18px;
 line-height:1.6;
 color:#555;
 }
+.testimonials{
+padding:80px 20px;
+background:#f8f8f8;
+}
+
+.review-title{
+text-align:center;
+color:#59A814;
+font-size:14px;
+font-weight:700;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.testimonials h2{
+text-align:center;
+font-size:40px;
+font-weight:900;
+line-height:1;
+margin-bottom:45px;
+color:#111;
+}
+
+.review-card{
+background:#fff;
+border:1px solid #e5e5e5;
+border-radius:8px;
+padding:28px;
+margin-bottom:28px;
+}
+
+.stars{
+color:#FDBA12;
+font-size:20px;
+margin-bottom:20px;
+}
+
+.review-card p{
+font-size:18px;
+line-height:1.6;
+color:#333;
+margin-bottom:25px;
+}
+
+.review-user{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.review-user img{
+width:32px;
+height:32px;
+}
+
+.review-user span{
+font-size:18px;
+font-weight:600;
+color:#111;
+}
