@@ -640,3 +640,85 @@ color:#59A814;
 box-shadow:0 2px 8px rgba(0,0,0,.08);
 text-decoration:none;
 }
+/* ===========================
+   Side Menu
+=========================== */
+
+.menu-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.25);
+display:flex;
+visibility:hidden;
+opacity:0;
+transition:.3s;
+z-index:9999;
+}
+
+.menu-overlay.show{
+visibility:visible;
+opacity:1;
+}
+
+.side-menu{
+width:55%;
+max-width:270px;
+height:100%;
+background:#f8f8f8;
+padding:28px 22px;
+transform:translateX(-100%);
+transition:.3s;
+overflow-y:auto;
+}
+
+.menu-overlay.show .side-menu{
+transform:translateX(0);
+}
+
+.side-menu h2{
+font-size:28px;
+font-weight:700;
+margin-bottom:22px;
+}
+
+.side-menu hr{
+border:none;
+border-top:1px solid #ddd;
+margin-bottom:24px;
+}
+
+.side-menu a{
+display:block;
+text-decoration:none;
+color:#111;
+font-size:21px;
+margin:22px 0;
+}
+
+.menu-btn{
+display:block;
+text-align:center;
+padding:18px 0;
+border-radius:18px;
+font-weight:700;
+margin-top:24px;
+font-size:18px;
+}
+
+.menu-white{
+background:#fff;
+border:2px solid #ddd;
+color:#111;
+}
+
+.menu-green{
+background:#5DAA1E;
+color:#fff;
+}
+
+.menu-btn:hover{
+opacity:.95;
+}
