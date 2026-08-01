@@ -132,13 +132,13 @@ font-size:18px;
 /* Statistics */
 
 .stats{
-padding:40px 20px 30px;
+padding:30px 20px 20px;
 text-align:center;
 background:#fff;
 }
 
 .stat{
-margin-bottom:38px;
+margin-bottom:28px;
 }
 
 .stat:last-child{
@@ -146,16 +146,16 @@ margin-bottom:0;
 }
 
 .stat h2{
-font-size:42px;
+font-size:34px;
 font-weight:800;
 color:#59a814;
 line-height:1;
-margin-bottom:6px;
+margin-bottom:4px;
 }
 
 .stat p{
-font-size:14px;
+font-size:12px;
 font-weight:700;
-letter-spacing:1px;
+letter-spacing:0.8px;
 color:#111;
 }
