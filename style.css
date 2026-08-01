@@ -664,11 +664,11 @@ opacity:1;
 }
 
 .side-menu{
-width:55%;
-max-width:270px;
+width:65%;
+max-width:340px;
 height:100%;
 background:#f8f8f8;
-padding:28px 22px;
+padding:30px 24px;
 transform:translateX(-100%);
 transition:.3s;
 overflow-y:auto;
