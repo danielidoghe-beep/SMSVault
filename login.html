@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Sign In | SMSVault</title>
+
+<link rel="stylesheet" href="login.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+<div class="logo">
+
+<div class="logo-icon">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="logo-text">
+SMSVault
+</div>
+
+</div>
+
+<div class="header-right">
+
+<i class="fa-regular fa-moon"></i>
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</header>
+
+<!-- Login -->
+
+<section class="login">
+
+<h1>
+Sign in
+</h1>
+
+<p class="subtitle">
+Welcome back! Please sign in to continue.
+</p>
+
+<button id="googleLogin" class="google-btn">
+
+<img
+src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+alt="Google">
+
+<span>
+Continue with Google
+</span>
+
+</button>
+
+<div class="divider">
+
+<span></span>
+
+<p>or sign in with email</p>
+
+<span></span>
+
+</div>
+
+<!-- Success / Error Messages -->
+
+<div id="authMessage"
+class="auth-message"></div>
+
+<form id="loginForm">
+
+<label>
+Email Address
+</label>
+
+<div class="input-box">
+
+<i class="fa-regular fa-envelope"></i>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required>
+
+</div>
+
+<label>
+Password
+</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="Enter your password"
+required>
+
+<i
+id="togglePassword"
+class="fa-regular fa-eye">
+</i>
+
+</div>
+
+<div class="login-options">
+
+<label class="remember">
+
+<input
+type="checkbox"
+id="remember">
+
+Remember me
+
+</label>
+
+<a
+href="forgot-password.html">
+
+Forgot password?
+
+</a>
+
+</div>
+
+<button
+type="submit"
+class="signin-btn">
+
+Sign In
+
+</button>
+
+</form>
+
+<p class="signup-text">
+
+Don't have an account?
+
+<a href="signup.html">
+
+Sign Up
+
+</a>
+
+</p>
+
+</section>
+<!-- Side Menu -->
+
+<div id="menuOverlay" class="menu-overlay">
+
+<div class="side-menu">
+
+<h2>Menu</h2>
+
+<hr>
+
+<a href="index.html">Home</a>
+
+<a href="services.html">Services</a>
+
+<a href="#">About</a>
+
+<a href="#">Pricing</a>
+
+<a href="#">FAQ</a>
+
+<a href="signup.html" class="menu-btn menu-white">
+
+CREATE ACCOUNT
+
+</a>
+
+<a href="login.html" class="menu-btn menu-green">
+
+SIGN IN
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Loading Screen -->
+
+<div id="pageLoader" class="page-loader">
+
+<div class="loader-content">
+
+<div class="loader-logo">
+
+<div class="logo-icon">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+</div>
+
+<p class="loading-text">
+
+Loading...
+
+</p>
+
+</div>
+
+</div>
+<!-- auth.js -->
+<script src="auth.js"></script>
+
+<!-- login.js -->
+<script type="module" src="login.js"></script>
+
+<!-- Side Menu -->
+
+<script>
+
+const menuBtn=document.querySelector(".fa-bars");
+const overlay=document.getElementById("menuOverlay");
+
+menuBtn.addEventListener("click",()=>{
+
+overlay.classList.toggle("show");
+
+});
+
+overlay.addEventListener("click",(e)=>{
+
+if(e.target===overlay){
+
+overlay.classList.remove("show");
+
+}
+
+});
+
+</script>
+
+<!-- Password Toggle -->
+
+<script>
+
+const password=document.getElementById("password");
+const toggle=document.getElementById("togglePassword");
+
+toggle.addEventListener("click",()=>{
+
+if(password.type==="password"){
+
+password.type="text";
+
+toggle.classList.remove("fa-eye");
+toggle.classList.add("fa-eye-slash");
+
+}else{
+
+password.type="password";
+
+toggle.classList.remove("fa-eye-slash");
+toggle.classList.add("fa-eye");
+
+}
+
+});
+
+</script>
+
+<!-- Loading Screen -->
+
+<script>
+
+const loader=document.getElementById("pageLoader");
+
+function showLoader(){
+
+loader.classList.add("show");
+
+}
+
+function hideLoader(){
+
+loader.classList.remove("show");
+
+}
+
+</script>
+
+</body>
+</html>
