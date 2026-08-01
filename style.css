@@ -722,3 +722,56 @@ color:#fff;
 .menu-btn:hover{
 opacity:.95;
 }
+.page-loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#fff;
+display:none;
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.page-loader.show{
+display:flex;
+}
+
+.loader-logo{
+animation:pulse 1s infinite ease-in-out;
+}
+
+.loader-logo .logo-icon span{
+display:block;
+width:42px;
+height:10px;
+border:4px solid #5DAA1E;
+border-radius:3px;
+transform:skewX(-30deg);
+margin-bottom:6px;
+}
+
+.loader-logo .logo-icon span:last-child{
+margin-bottom:0;
+}
+
+@keyframes pulse{
+
+0%{
+opacity:.3;
+transform:scale(.9);
+}
+
+50%{
+opacity:1;
+transform:scale(1);
+}
+
+100%{
+opacity:.3;
+transform:scale(.9);
+}
+
+}
