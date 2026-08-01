@@ -78,8 +78,6 @@ BROWSE SERVICES
 
 </section>
 
-</body>
-</html>
 <section class="category-bar">
 
 <div class="category-item active">
@@ -604,3 +602,44 @@ Your trusted platform for SMS verification numbers, virtual numbers and digital 
 </div>
 
 </footer>
+<!-- Firebase -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.17.0/firebase-analytics.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBvvJBsJCIcDfUsoIsOvkmd_HLOp8aUcWk",
+  authDomain: "smsvault.firebaseapp.com",
+  projectId: "smsvault",
+  storageBucket: "smsvault.firebasestorage.app",
+  messagingSenderId: "775113064439",
+  appId: "1:775113064439:web:c6b5269de8c633e2c7b8f2",
+  measurementId: "G-XJF6BPG72S"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+
+<!-- FAQ Toggle -->
+<script>
+document.querySelectorAll(".faq-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector("span:last-child");
+
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      icon.textContent = "+";
+    } else {
+      content.style.display = "block";
+      icon.textContent = "−";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+</body>
+</html>
